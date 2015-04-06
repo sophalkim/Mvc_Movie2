@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "LoopMessage";
+    
+}
+
+<h2>LoopMessage</h2>
+
+@{
+    for (int i = 0; i < ViewBag.amount; i++)
+    {
+        <p>@ViewBag.message</p>
+    }
+}
+

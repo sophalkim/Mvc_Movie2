@@ -9,8 +9,10 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 
-    @using (Html.BeginForm()) {
-        <p> Title: @Html.TextBox("SearchString") <br />
+    @using (Html.BeginForm("Index", "Movies", FormMethod.Get)) {
+        <p> 
+            Genre: @Html.DropDownList("movieGenre", "All")
+            Title: @Html.TextBox("SearchString") <br />
         <input type="submit" value="Filter" class="btn btn-success" /></p>
         }
 </p>
